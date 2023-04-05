@@ -7,6 +7,7 @@
 #include <QPen>
 #include <QRandomGenerator>
 #include <iostream>
+#include <QValidator>
 
 
 namespace Ui {
@@ -22,15 +23,21 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_pushButton_draw_clicked();
+    void on_pushButton_draw_clicked(); //button "star"
 
-    void drawHouse(QPainter *painter);
+    void house(QPainter *painter);
 
-    void drawLake(QPainter *painter);
+    void lake(QPainter *painter);
 
     void land(QPainter *painter, QPen *pen);
 
-    void swan(QPainter *painter, int x, int y, QPen *pen);
+    void sky(QPainter *painter, QPen *pen);
+
+    void swan(QPainter *painter, int x, int y);
+
+    void moon(QPainter *painter);
+
+    void rabbit(QPainter *painter);
 
     void drawStar(QPainter *painter, int count);
 
@@ -40,11 +47,8 @@ private slots:
 
     void drawCircle(QPainter *painter, int x, int y, int width,int height, QColor color);
 private:
+
     Ui::MainWindow *ui;
-
-
-
-
 };
 
 #endif // MAINWINDOW_H
